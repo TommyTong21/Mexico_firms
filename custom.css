@@ -1,0 +1,47 @@
+/*-- scss:rules --*/
+/* custom.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.reveal {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 1.2em;
+  color: #4B2E83; /* CASA紫色 */
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  color: #4B2E83;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+.reveal .slide-logo {
+  width: auto !important;
+  height: 500px !important;
+}
+
+.reveal .slide-background-content {
+  background-position: right 30px top 60px !important;
+  background-repeat: no-repeat !important;
+}
+
+.reveal ul {
+  margin-left: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.reveal .footer {
+  color: #4B2E83;
+  font-size: 0.9em;
+  text-align: right;
+  padding-right: 2em;
+}
+
+.reveal .slide-number {
+  color: #4B2E83 !important;
+  font-size: 1em !important;
+  right: 2em !important;
+  bottom: 1em !important;
+}
+
+

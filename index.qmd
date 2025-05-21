@@ -1,0 +1,114 @@
+---
+title: "Micro-Spatial Mechanisms and Evolution of Industrial Agglomeration within Mexican Cities"
+format:
+  revealjs:
+    theme: [default, custom.css]
+    logo: assets/android-chrome-256x256.png
+    slide-number: true
+    center: true
+    width: 1200
+    height: 800
+    transition: fade
+    toc: false
+    navigation-mode: linear
+    controls: true
+    progress: true
+    search: true
+    chalkboard: true
+    footer: ""
+css: custom.css
+---
+
+## Research Question
+
+#### Main Research Question
+- **How does industrial agglomeration form within Mexican cities, and how do its spatial patterns and driving mechanisms differ across industries, cities, and over time?**
+
+#### Sub-questions
+- At what spatial scales does industrial agglomeration occur within cities, and over what distances do different cost-sharing channels operate?
+- How do the spatial patterns of industrial agglomeration vary by city size and industry sector?
+- How have the degree and spatial distribution of firm clustering changed over time?
+- What factors determine the differences in intra-city industrial clustering?
+- How does the relative importance of different agglomeration mechanisms (supply chain linkages, labor pooling, knowledge spillovers) vary across industries and over time?
+
+---
+
+## Literature Review 1
+
+- In recent years, research on industrial agglomeration has developed a mature theoretical and methodological framework. 
+
+| Theory/Method | Key References/Authors | Main Content/Mechanism | Methods & Innovations |
+|------------------------------|-----------------------------------------|--------------------------------------------------------|--------------------------------------|
+| Three Mechanisms of Agglomeration | Marshall (1881); Ellison et al. (2010) | Knowledge spillovers, labor pooling, input-output linkages | EG index, mechanism decomposition, spatial statistics |
+| Industry Relatedness & Diversity | Frenken et al. (2007); Neffke & Henning (2013) | Skill relatedness, related/unrelated variety for innovation and resilience | Relatedness matrices, labor flow analysis |
+| Co-agglomeration Mechanisms & Dynamics | Diodato et al. (2018); O'Clery et al. (2021) | Decomposition and dynamic evolution of agglomeration mechanisms | Network analysis, spatial econometrics, community detection |
+
+---
+
+## Literature Review 2
+
+- Most empirical studies have focused on macro- and meso-level spatial scales, such as countries, states, or metropolitan areas. 
+
+- Currently, there is a paucity of empirical research on the fine-grained spatial distribution, agglomeration mechanisms, and dynamic evolution of firms within cities. Existing studies are often constrained by data granularity, making it difficult to reveal the clustering patterns and evolution of firms across different urban areas. 
+
+| Research Topic | Key References/Authors | Spatial Scale | Methods/Data | Limitations/Gaps |
+|---------------------------------|-----------------------------------|----------------------|-------------------------------|--------------------------------------------------|
+| Inter-city Knowledge Flows & Networks | Balland et al. (2019) | City/Region (macro) | Patent data, network analysis | No intra-city micro spatial analysis |
+| Intra-city Jobs & Land Use | Goswami et al. (2019) | City/District (meso) | Employment, land data, spatial analysis | Focus on large units, lack of firm-level micro data |
+| Our Research | This Study | Intra-city (micro) | Firm-level geocoded data, spatial statistics, network analysis | Focus on micro-scale agglomeration mechanisms and dynamics |
+
+---
+
+## Data Source and Data Quality
+
+- The primary data source for this study is the National System of Statistical and Geographical Information ([INEGI](https://en.www.inegi.org.mx/default.html)), which is an autonomous public institution responsible for collecting and disseminating information on Mexico's territory, resources, population, and economy.
+
+- We mainly used the establishments data and census data from the INEGI website. The establishments dataset provides precise geographic coordinates, industry classification, number of employees, and other detailed information for each firm. The high spatial resolution of this data enables micro-scale spatial analysis within cities.
+
+::: {.columns}
+::: {.column width="60%"}
+
+| Key columns        | Description                                         | Example                        |
+|--------------------|-----------------------------------------------------|---------------------------------|
+| raz_social         | The name of a legally constituted company           | GOBIERNO MUNICIPAL             |
+| codigo_act         | The classification of the activities using SCIAN     | 435220                         |
+| per_ocu            | Number of employees, grouped by rank                | 0 a 5 personas                 |
+| latitud & longitud | Latitude and longitude                              | 21.91688045, -102.31368466     |
+
+:::
+::: {.column width="40%"}
+
+<img src="assets/images/INEGI_estab_point.png" alt="INEGI_estab_point" style="width:100%; display: block; margin: 0 auto;" />
+
+:::
+:::
+
+---
+
+## Data overview
+
+- **Industry classification**: The industry codes are based on SCIAN ([link](https://www.inegi.org.mx/contenidos/app/scian/tablaxvi.pdf)).
+
+- **Total establishments**: 5,538,543
+    - Individuals: 4,584,040
+    - Companies: 954,506
+
+- **Most common industry for individuals**: 4611 (Retail trade of groceries and food)
+- **Most common industry for companies**: 8132 (Religious, political and civil associations and organizations)
+
+- **Total firms**: 441,350
+    - The company with the most employees and branches: SECRETARIA DE EDUCACION PUBLICA
+
+- **Firms with multi-industry operations**: 22,919 out of 441,350 companies operate in more than one industry
+    - GOBIERNO MUNICIPAL operates in the most industries (58 different industries)
+
+- **Industry with the most companies**: 8132 (Religious, political and civil associations and organizations)
+- **Industry with the highest average employment**: 4622 (Retail trade in department stores)
+
+- **Preliminary spatial clustering analysis**: Establishments in the following industries most frequently appear spatially clustered:
+    - 6111 (Elementary, secondary, and special needs schools)
+    - 8132 (Religious, political and civil associations and organizations)
+    - 9316 (Administrative activities of social welfare institutions)
+    - 9312 (General public administration)
+    - 5221 (Multiple Banking)
+
